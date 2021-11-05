@@ -1,0 +1,85 @@
+body {
+  max-width: 450px;
+  min-width: 450px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: "Public Sans", sans-serif;
+}
+.container {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(248, 219, 219) 0%,
+    rgb(229, 248, 250) 90%
+  );
+  padding: 20px 35px 10px;
+  border-radius: 8px;
+  box-shadow: rgba(221, 221, 221, 0.493) 3px 3px 10px;
+}
+.searchBar {
+  margin: 0 0 0 -10px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.685);
+  border: none;
+  border-radius: 5px;
+}
+.magnifier {
+  border: none;
+  background: transparent;
+}
+.locationButton {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: rgb(66, 56, 66);
+}
+.locationButton:hover {
+  color: #b66b6b;
+  transition: all 200ms ease-in-out;
+}
+.date {
+  font-size: 22px;
+  margin: 10px 0 -8px;
+  font-family: "Manrope", sans-serif;
+}
+.time {
+  font-size: 15px;
+}
+h1 {
+  font-size: 80px;
+  display: inline;
+}
+.celsius {
+  font-size: 25px;
+  color: rgb(68, 75, 95);
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: all 200ms ease-in-out;
+}
+a:hover {
+  color: rgb(0, 0, 0);
+}
+h2 {
+  font-size: 35px;
+  margin: -12px 0 10px;
+  color: rgb(56, 67, 71);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.row {
+  padding: 30px 0;
+  font-family: "Manrope", sans-serif;
+}
+.col {
+  background: rgba(212, 201, 212, 0.295);
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 7px 0;
+  box-shadow: rgba(187, 187, 187, 0.308) 3px 3px 10px;
+}
+.temp {
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: "Public Sans", sans-serif;
+}
