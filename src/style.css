@@ -75,6 +75,10 @@ h2 {
   margin: 0 5px;
   padding: 7px 0;
   box-shadow: rgba(187, 187, 187, 0.26) 3px 3px 10px;
+  transition: all 200ms ease-in-out;
+}
+.col:hover {
+  background: #e5d4ec98;
 }
 .temp {
   font-weight: bolder;
