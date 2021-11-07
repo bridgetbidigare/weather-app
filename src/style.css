@@ -51,13 +51,10 @@ h1 {
 .celsius {
   font-size: 25px;
   color: rgb(68, 75, 95);
-}
-a {
-  color: inherit;
-  text-decoration: inherit;
+  text-decoration: none;
   transition: all 200ms ease-in-out;
 }
-a:hover {
+.celsius:hover {
   color: rgb(0, 0, 0);
 }
 h2 {
@@ -82,4 +79,15 @@ h2 {
   font-weight: bolder;
   font-size: 20px;
   font-family: "Public Sans", sans-serif;
+}
+.footer {
+  font-size: 12px;
+  color: #8b8b8b;
+}
+.footerLinks {
+  color: #8b8b8b;
+  transition: all 200ms ease-in-out;
+}
+.footerLinks:hover {
+  color: #c8bbd8;
 }
