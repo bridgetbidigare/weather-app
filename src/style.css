@@ -13,7 +13,7 @@ body {
   );
   padding: 20px 35px 10px;
   border-radius: 8px;
-  box-shadow: rgba(221, 221, 221, 0.493) 3px 3px 10px;
+  box-shadow: rgba(221, 221, 221, 0.397) 3px 3px 10px;
 }
 .searchBar {
   margin: 0 0 0 -10px;
@@ -33,7 +33,7 @@ body {
   color: rgb(66, 56, 66);
 }
 .locationButton:hover {
-  color: #b66b6b;
+  color: #b69cd6;
   transition: all 200ms ease-in-out;
 }
 .date {
@@ -51,11 +51,12 @@ h1 {
 .celsius {
   font-size: 25px;
   color: rgb(68, 75, 95);
+  font-weight: bold;
   text-decoration: none;
   transition: all 200ms ease-in-out;
 }
 .celsius:hover {
-  color: rgb(0, 0, 0);
+  color: #b69cd6;
 }
 h2 {
   font-size: 35px;
@@ -69,11 +70,11 @@ h2 {
   font-family: "Manrope", sans-serif;
 }
 .col {
-  background: rgba(212, 201, 212, 0.295);
+  background: rgba(217, 205, 236, 0.274);
   border-radius: 5px;
   margin: 0 5px;
   padding: 7px 0;
-  box-shadow: rgba(187, 187, 187, 0.308) 3px 3px 10px;
+  box-shadow: rgba(187, 187, 187, 0.26) 3px 3px 10px;
 }
 .temp {
   font-weight: bolder;
@@ -89,5 +90,5 @@ h2 {
   transition: all 200ms ease-in-out;
 }
 .footerLinks:hover {
-  color: #c8bbd8;
+  color: #b69cd6;
 }

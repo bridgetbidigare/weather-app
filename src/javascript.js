@@ -59,7 +59,12 @@ function formatTime() {
   if (minutes < 10) {
     minutes = `0${minutes}`
   }
-  currentTime.innerHTML = `${hour}:${minutes}`
+  hours = ((hour + 11) % 12 + 1);
+  if (hour > 11) {
+    currentTime.innerHTML = `${hours}:${minutes}PM`
+  } else {
+    currentTime.innerHTML = `${hours}:${minutes}AM`
+  }
 }
 
 function searchCity(event) {
