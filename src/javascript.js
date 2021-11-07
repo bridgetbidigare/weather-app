@@ -53,9 +53,6 @@ function formatTime() {
   let currentTime = document.querySelector("#time");
   let hour = now.getHours();
   let minutes = now.getMinutes();
-  if (hour < 10) {
-    hour = `0${hour}`
-  }
   if (minutes < 10) {
     minutes = `0${minutes}`
   }
@@ -63,7 +60,7 @@ function formatTime() {
   if (hour > 11) {
     currentTime.innerHTML = `${hours}:${minutes}PM`
   } else {
-    currentTime.innerHTML = `${hours}:${minutes}AM`
+    currentTime.innerHTML = `${hour}:${minutes}AM`
   }
 }
 
