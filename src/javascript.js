@@ -6,8 +6,12 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
 function showTemp(response) {
   let temperature = document.querySelector("#degree-temp");
   let geoLocCity = document.querySelector("h2");
+  let windSpeed = document.querySelector("#windSpeed");
+  let weatherDescription = document.querySelector("#weatherDescription");
   temperature.innerHTML = Math.round(response.data.main.temp);
   geoLocCity.innerHTML = response.data.name;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  weatherDescription.innerHTML = response.data.weather[0].main;
 }
 
 axios.get(apiUrl).then(showTemp);

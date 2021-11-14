@@ -65,6 +65,20 @@ h2 {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+.weatherDescription {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  color: #7d5ca79d;
+  margin-top: 5px;
+}
+.windSpeed {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  color: #755b949c;
+}
 .row {
   padding: 30px 0;
   font-family: "Manrope", sans-serif;
@@ -87,10 +101,10 @@ h2 {
 }
 .footer {
   font-size: 12px;
-  color: #8b8b8b;
+  color: #acacac;
 }
 .footerLinks {
-  color: #8b8b8b;
+  color: #acacac;
   transition: all 200ms ease-in-out;
 }
 .footerLinks:hover {
