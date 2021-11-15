@@ -8,10 +8,50 @@ function showTemp(response) {
   let geoLocCity = document.querySelector("h2");
   let windSpeed = document.querySelector("#windSpeed");
   let weatherDescription = document.querySelector("#weatherDescription");
+  let weatherImage = document.querySelector("#weatherImage");
   temperature.innerHTML = Math.round(response.data.main.temp);
   geoLocCity.innerHTML = response.data.name;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
-  weatherDescription.innerHTML = response.data.weather[0].main;
+  weatherDescription.innerHTML = response.data.weather[0].description;
+  if (response.data.weather[0].main === "Clear" && response.data.weather[0].icon === "01n") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/028/original/moon.png?1636948953")
+  };
+  if (response.data.weather[0].main === "Clear" && response.data.weather[0].icon === "01d") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/033/original/sunny.png?1636949659")
+  };
+  if (response.data.weather[0].main === "Clouds" && response.data.weather[0].icon === "02d") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/035/original/suncloud.png?1636949700")
+  };
+  if (response.data.weather[0].main === "Clouds") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
+  };
+  if (response.data.weather[0].main === "Fog") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
+  };
+  if (response.data.weather[0].main === "Mist") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
+  };
+  if (response.data.weather[0].main === "Smoke") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
+  };
+  if (response.data.weather[0].main === "Haze") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
+  };
+  if (response.data.weather[0].main === "Rain") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/029/original/rainy.png?1636949596")
+  };
+  if (response.data.weather[0].main === "Thunderstorm") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/030/original/stormy.png?1636949603")
+  };
+  if (response.data.weather[0].main === "Snow") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/034/original/snowy.png?1636949679")
+  };
+  if (response.data.weather[0].main === "Tornado") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/037/original/tornado.png?1636951510")
+  }
+  if (response.data.wind.speed > 24 && response.data.weather[0].main === "Clouds") {
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/031/original/windy.png?1636949640")
+  }
 }
 
 axios.get(apiUrl).then(showTemp);
