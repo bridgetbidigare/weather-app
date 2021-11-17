@@ -173,12 +173,25 @@ function convertTempC(event) {
   temp.innerHTML = Math.round(((fahrenheitTemp - 32) * 5) / 9);
   degreef.innerHTML = "°C";
   celsius.innerHTML = "°F";
+  document.getElementById('celsius').onclick = convertTempF;
 }
 
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", convertTempC);
+function convertTempF(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#degree-temp");
+  let degreec = document.querySelector("#degree-symbol");
+  let tempc = temp.innerHTML;
+  tempc = Number(tempc);
+  temp.innerHTML = Math.round((tempc * 9 / 5) + 32);
+  degreec.innerHTML = "°F";
+  celsius.innerHTML = "°C";
+  document.getElementById('celsius').onclick = convertTempC;
+}
+
+document.getElementById('celsius').onclick = convertTempC;
 
 let fahrenheitTemp = null;
+let celsiusTemp = null;
 
 formatDate();
 formatTime();
