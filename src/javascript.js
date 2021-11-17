@@ -11,11 +11,13 @@ function showTemp(response) {
   let weatherImage = document.querySelector("#weatherImage");
   let spotify = document.querySelector("#spotifyPlayer");
   let musicText = document.querySelector("#musicText");
+
   fahrenheitTemp = response.data.main.temp;
   temperature.innerHTML = Math.round(fahrenheitTemp);
   geoLocCity.innerHTML = response.data.name;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   weatherDescription.innerHTML = response.data.weather[0].description;
+
   if (response.data.weather[0].main === "Clear" && response.data.weather[0].icon === "01n") {
     weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/028/original/moon.png?1636948953")
     spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/7Hx5FQvtc1LT8V50jJOTgP?utm_source=generator")
@@ -142,8 +144,16 @@ function searchCity(event) {
   let cities = document.querySelector("#city-search");
   let h2 = document.querySelector("h2");
   let searchUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities.value}&appid=${apiKey}&units=${unit}`;
+  let degreec = document.querySelector("#degree-symbol");
+
   h2.innerHTML = cities.value
   axios.get(searchUrl).then(showTemp);
+
+  if (degreec.innerHTML = "°C") {
+    degreec.innerHTML = "°F";
+    celsius.innerHTML = "°C";
+    document.getElementById('celsius').onclick = convertTempC;
+  }
 }
 
 let cityInput = document.querySelector("#search-bar");
@@ -191,7 +201,6 @@ function convertTempF(event) {
 document.getElementById('celsius').onclick = convertTempC;
 
 let fahrenheitTemp = null;
-let celsiusTemp = null;
 
 formatDate();
 formatTime();
