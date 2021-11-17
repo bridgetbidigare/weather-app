@@ -19,69 +19,82 @@ function showTemp(response) {
   weatherDescription.innerHTML = response.data.weather[0].description;
 
   if (response.data.weather[0].main === "Clear" && response.data.weather[0].icon === "01n") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/028/original/moon.png?1636948953")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/7Hx5FQvtc1LT8V50jJOTgP?utm_source=generator")
-    musicText.innerHTML = "🌚 for clear nights..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/028/original/moon.png?1636948953");
+    weatherImage.setAttribute("alt", "Moon and stars");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/7Hx5FQvtc1LT8V50jJOTgP?utm_source=generator");
+    musicText.innerHTML = "🌚 for clear nights...";
   };
   if (response.data.weather[0].main === "Clear" && response.data.weather[0].icon === "01d") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/033/original/sunny.png?1636949659")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/2KZp84UHWnlZ0CuxcbTq5R?utm_source=generator")
-    musicText.innerHTML = "🌱 for sunny days..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/033/original/sunny.png?1636949659");
+    weatherImage.setAttribute("alt", "Sun");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/2KZp84UHWnlZ0CuxcbTq5R?utm_source=generator");
+    musicText.innerHTML = "🌱 for sunny days...";
   };
   if (response.data.weather[0].main === "Clouds" && response.data.weather[0].icon === "02d") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/035/original/suncloud.png?1636949700")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/2KZp84UHWnlZ0CuxcbTq5R?utm_source=generator")
-    musicText.innerHTML = "🌱 for sunny days..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/035/original/suncloud.png?1636949700");
+    weatherImage.setAttribute("alt", "Sun and cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/2KZp84UHWnlZ0CuxcbTq5R?utm_source=generator");
+    musicText.innerHTML = "🌱 for sunny days...";
   };
   if (response.data.weather[0].main === "Clouds") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator")
-    musicText.innerHTML = "🌫 for when it's gloomy out..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651");
+    weatherImage.setAttribute("alt", "Cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
+    musicText.innerHTML = "🌫 for when it's gloomy out...";
   };
   if (response.data.weather[0].main === "Fog") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator")
-    musicText.innerHTML = "🌫 for when it's gloomy out..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651");
+    weatherImage.setAttribute("alt", "Cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
+    musicText.innerHTML = "🌫 for when it's gloomy out...";
   };
   if (response.data.weather[0].main === "Mist") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator")
-    musicText.innerHTML = "🌫 for when it's gloomy out..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651");
+    weatherImage.setAttribute("alt", "Cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
+    musicText.innerHTML = "🌫 for when it's gloomy out...";
   };
   if (response.data.weather[0].main === "Smoke") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator")
-    musicText.innerHTML = "🌫 for when it's gloomy out..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651");
+    weatherImage.setAttribute("alt", "Cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
+    musicText.innerHTML = "🌫 for when it's gloomy out...";
   };
   if (response.data.weather[0].main === "Haze") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator")
-    musicText.innerHTML = "🌫 for when it's gloomy out..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/032/original/cloudy.png?1636949651");
+    weatherImage.setAttribute("alt", "Cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
+    musicText.innerHTML = "🌫 for when it's gloomy out...";
   };
   if (response.data.weather[0].main === "Rain") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/029/original/rainy.png?1636949596")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0deTdXGmrLsQz3NfjYnPHj?utm_source=generator")
-    musicText.innerHTML = "☔️ for when it's rainy..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/029/original/rainy.png?1636949596");
+    weatherImage.setAttribute("alt", "Rain cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0deTdXGmrLsQz3NfjYnPHj?utm_source=generator");
+    musicText.innerHTML = "☔️ for when it's rainy...";
   };
   if (response.data.weather[0].main === "Thunderstorm") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/030/original/stormy.png?1636949603")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0deTdXGmrLsQz3NfjYnPHj?utm_source=generator")
-    musicText.innerHTML = "☔️ for when it's rainy..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/030/original/stormy.png?1636949603");
+    weatherImage.setAttribute("alt", "Storm cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0deTdXGmrLsQz3NfjYnPHj?utm_source=generator");
+    musicText.innerHTML = "☔️ for when it's rainy...";
   };
   if (response.data.weather[0].main === "Snow") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/034/original/snowy.png?1636949679")
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/034/original/snowy.png?1636949679");
+    weatherImage.setAttribute("alt", "Snow cloud")
     spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/5BA304KsTNJMk408bSgr5c?utm_source=generator")
-    musicText.innerHTML = "☃️ for when it's snowing..."
+    musicText.innerHTML = "☃️ for when it's snowing...";
   };
   if (response.data.weather[0].main === "Tornado") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/037/original/tornado.png?1636951510")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator")
-    musicText.innerHTML = "🌫 for when it's gloomy out..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/037/original/tornado.png?1636951510");
+    weatherImage.setAttribute("alt", "Tornado");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
+    musicText.innerHTML = "🌫 for when it's gloomy out...";
   }
   if (response.data.wind.speed > 24 && response.data.weather[0].main === "Clouds") {
-    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/031/original/windy.png?1636949640")
-    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator")
-    musicText.innerHTML = "🌬 for when it's gloomy out..."
+    weatherImage.setAttribute("src", "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/031/original/windy.png?1636949640");
+    weatherImage.setAttribute("alt", "Wind cloud");
+    spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
+    musicText.innerHTML = "🌬 for when it's gloomy out...";
   }
 }
 
