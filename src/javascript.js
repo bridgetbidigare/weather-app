@@ -52,6 +52,9 @@ function formatTime() {
   }
 }
 
+formatDate();
+formatTime();
+
 
 // 🔎 Search
 
@@ -98,7 +101,7 @@ locationButton.addEventListener("click", getPosition);
 
 let apiKey = "75c66def1228b9939b902b974cffcda2";
 let unit = "imperial";
-let city = "Chicago";
+let city = "Detroit";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 
 function showTemp(response) {
@@ -194,6 +197,8 @@ function showTemp(response) {
     spotify.setAttribute("src", "https://open.spotify.com/embed/playlist/0PD2Rz22lB12jSHWcVRAX0?utm_source=generator");
     musicText.innerHTML = "🌬 for when it's gloomy out...";
   }
+
+  getForecast(response.data.coord);
 }
 
 axios.get(apiUrl).then(showTemp);
@@ -229,5 +234,47 @@ document.getElementById('celsius').onclick = convertTempC;
 
 let fahrenheitTemp = null;
 
-formatDate();
-formatTime();
+
+// 🗓 5 Day Forecast
+
+function getForecast(coordinates) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function formatForecastDays(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "SUN",
+    "MON",
+    "TUE",
+    "WED",
+    "THUR",
+    "FRI",
+    "SAT"
+  ];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = document.querySelector("#forecast");
+  let dailyForecast = response.data.daily;
+  let forecastHTML = `<div class="row">`;
+  dailyForecast.forEach(function (days, index) {
+    if (index < 6 && index > 0) {
+      forecastHTML = forecastHTML + `
+          <div class="col w-20">
+            <span class="temp"
+              >${Math.round(days.temp.max)}°F
+             <br />
+             <img src="https://openweathermap.org/img/wn/${days.weather[0].icon}@2x.png" class="miniWeatherIcons"></span
+           >
+            <br />
+            ${formatForecastDays(days.dt)}
+          </div>`
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
