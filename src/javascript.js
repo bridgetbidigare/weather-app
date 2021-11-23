@@ -225,9 +225,7 @@ function convertTempF(event) {
   event.preventDefault();
   let temp = document.querySelector("#degree-temp");
   let degreec = document.querySelector("#degree-symbol");
-  let tempc = temp.innerHTML;
-  tempc = Number(tempc);
-  temp.innerHTML = Math.round((tempc * 9 / 5) + 32);
+  temp.innerHTML = Math.round(fahrenheitTemp);
   degreec.innerHTML = "°F";
   celsius.innerHTML = "°C";
   document.getElementById('celsius').onclick = convertTempC;
