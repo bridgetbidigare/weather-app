@@ -50,6 +50,9 @@ function formatTime() {
   } else {
     currentTime.innerHTML = `${hour}:${minutes}AM`
   }
+  if (hour === 0) {
+    currentTime.innerHTML = `12:${minutes}AM`
+  }
 }
 
 formatDate();
